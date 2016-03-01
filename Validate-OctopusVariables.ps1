@@ -27,11 +27,29 @@ param (
  
     )
  
+
+function Get-LibraryVariableSets($Server, $ApiKey)
+{
+    return Invoke-RestMethod -Uri "$Server/api/libraryvariablesets/all" -Headers @{"X-Octopus-ApiKey"=$ApiKey}
+}
+
+# ------------------------------------------------------------------------------------------------------
+
+function Get-Projects($Server, $ApiKey)
+{
+    return Invoke-RestMethod -Uri "$Server/api/projects/all" -Headers @{"X-Octopus-ApiKey"=$ApiKey}
+}
+
+# ------------------------------------------------------------------------------------------------------
+
+function Get-Projects($Server, $ApiKey)
+{
+    return Invoke-RestMethod -Uri "$Server/api/projects/all" -Headers @{"X-Octopus-ApiKey"=$ApiKey}
+}
+
+# ------------------------------------------------------------------------------------------------------
 # MAIN
-# ================================================================================================================================================
-# load up common functions
-. .\CommonFunctions.ps1
-. .\HelperFunctions.ps1
+# ======================================================================================================
 $ProgressPreference="SilentlyContinue"
  
 Write-Host "Reading all Octopus Projects..." -f DarkCyan
@@ -76,7 +94,6 @@ foreach ($app in $projects)
         Write-Host " OK" -f Green
     }
 }
- 
 Write-Host
 Write-Host
 Write-Host "Checking Library Set Variables for duplicate values..."
