@@ -42,9 +42,9 @@ function Get-Projects($Server, $ApiKey)
 
 # ------------------------------------------------------------------------------------------------------
 
-function Get-Projects($Server, $ApiKey)
+function Get-VariableSet($Server, $ApiKey, $VariableId) 
 {
-    return Invoke-RestMethod -Uri "$Server/api/projects/all" -Headers @{"X-Octopus-ApiKey"=$ApiKey}
+    return Invoke-RestMethod -Uri "$Server/api/variables/$VariableId" -Headers @{"X-Octopus-ApiKey"=$ApiKey}
 }
 
 # ------------------------------------------------------------------------------------------------------
