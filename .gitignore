@@ -1,0 +1,13 @@
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+.browse
+.vscode
+.VC.db

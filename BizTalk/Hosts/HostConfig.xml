@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AdapterMappingConfiguration>
+    <HostNames>
+        <Host name="ReceieveHost" group="BizTalk Application Users" isolated="false" tracking="false" Is32Bit="false" trusted="false">
+            <Instance server="SERVERNAMEHERE" account="\svc_bts_receive" password="PASSWORDHERE" />
+        </Host>
+        <Host name="SendHost" group="BizTalk Application Users" isolated="false" tracking="false" Is32Bit="false" trusted="false">
+            <Instance server="PASSWORDHERE" account="\svc_bts_send" password="PASSWORDHERE" />
+        </Host>
+        <Host name="TrackingHost" group="BizTalk Application Users" isolated="false" tracking="true" Is32Bit="false" trusted="false">
+            <Instance server="PASSWORDHERE" account="\svc_bts_track" password="PASSWORDHERE" />
+        </Host>
+    </HostNames>
+    <Adapters>
+        <Adapter name="FILE" send="true" receive="true" isoReceive="false" />
+        <Adapter name="FTP" send="true" receive="true" isoReceive="false" />
+        <Adapter name="HTTP" send="true" receive="false" isoReceive="true" />
+        <Adapter name="MQSeries" send="true" receive="true" isoReceive="false" />
+        <Adapter name="MSMQ" send="true" receive="true" isoReceive="false" />
+        <Adapter name="POP3" send="false" receive="true" isoReceive="false" />
+        <Adapter name="SMTP" send="true" receive="false" isoReceive="false" />
+        <Adapter name="SOAP" send="true" receive="false" isoReceive="true" />
+        <Adapter name="SQL" send="true" receive="true" isoReceive="false" />
+        <Adapter name="WCF-BasicHttp" send="true" receive="false" isoReceive="true" />
+        <Adapter name="WCF-Custom" send="true" receive="true" isoReceive="false" />
+        <Adapter name="WCF-CustomIsolated" send="false" receive="false" isoReceive="true" />
+        <Adapter name="WCF-NetMsmq" send="true" receive="true" isoReceive="false" />
+        <Adapter name="WCF-NetNamedPipe" send="true" receive="true" isoReceive="false" />
+        <Adapter name="WCF-NetTcp" send="true" receive="true" isoReceive="false" />
+        <Adapter name="WCF-SQL" send="true" receive="true" isoReceive="false" />
+        <Adapter name="WCF-WSHttp" send="true" receive="false" isoReceive="true" />
+    </Adapters>
+</AdapterMappingConfiguration>
