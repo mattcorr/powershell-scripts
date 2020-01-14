@@ -8,7 +8,7 @@
     Admin console.
     There are switchs you can include to skip over parts of the scripts if desired.
 
-.PARAMETER ConfigFile 
+.PARAMETER ConfigurationFile 
    the name of the config file to use. Contains info about hosts, host instancea and handlers to create  
 .PARAMETER SkipHosts 
    If set, the Host creation section is skipped
@@ -28,7 +28,7 @@
 param (
     
    [ValidateScript({Test-Path -Path $_ -PathType Leaf})]
-   [string] $ConfigFile = "$pwd\HostConfig.xml",
+   [string] $configurationFile = "$pwd\HostConfig.xml",
    
    [switch] $SkipHosts,
    
