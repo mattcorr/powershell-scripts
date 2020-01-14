@@ -7,7 +7,7 @@
     This will save users a lot of time as they wont have to manually remove them all via the BizTalk 
     Admin console.
 
-.PARAMETER ConfigFile 
+.PARAMETER ConfigurationFile 
    the name of the config file to use. Contains info about hosts, host instancea and handlers to create  
      
 .EXAMPLE 
